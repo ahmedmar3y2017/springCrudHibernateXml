@@ -105,7 +105,7 @@
         <mvc:interceptor>
 
             <!-- mapping path that you want to make and execute this interceptor class -->
-            <mvc:mapping path="/" />
+            <mvc:mapping path="/"/>
             <!-- /spring/submitform.html -->
             <bean class="Interceptor.DayOfWeekInterceptor"></bean>
 

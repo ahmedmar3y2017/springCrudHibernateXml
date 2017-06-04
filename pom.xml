@@ -59,6 +59,7 @@
             <artifactId>spring-tx</artifactId>
             <version>4.2.5.RELEASE</version>
         </dependency>
+        <!--*********************** spring security *****************-->
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-core</artifactId>
@@ -74,6 +75,15 @@
             <artifactId>spring-security-config</artifactId>
             <version>4.0.4.RELEASE</version>
         </dependency>
+
+
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-taglibs</artifactId>
+            <version>4.0.4.RELEASE</version>
+        </dependency>
+
+        <!--****************** jstl ************-->
         <dependency>
             <groupId>jstl</groupId>
             <artifactId>jstl</artifactId>
@@ -128,39 +138,7 @@
             <artifactId>stax2-api</artifactId>
             <version>3.1.4</version>
         </dependency>
-
-        <!--&lt;!&ndash;**************************************** hibernate *************************&ndash;&gt;-->
-
-        <!--<dependency>-->
-        <!--<groupId>org.hibernate</groupId>-->
-        <!--<artifactId>hibernate-core</artifactId>-->
-        <!--<version>4.3.10.Final</version>-->
-        <!--</dependency>-->
-
-        <!--<dependency>-->
-        <!--<groupId>org.hibernate</groupId>-->
-        <!--<artifactId>hibernate-entitymanager</artifactId>-->
-        <!--<version>4.3.10.Final</version>-->
-        <!--</dependency>-->
-
-        <!--<dependency>-->
-        <!--<groupId>org.slf4j</groupId>-->
-        <!--<artifactId>slf4j-log4j12</artifactId>-->
-        <!--<version>1.7.12</version>-->
-        <!--</dependency>-->
-
-        <!--<dependency>-->
-        <!--<groupId>org.javassist</groupId>-->
-        <!--<artifactId>javassist</artifactId>-->
-        <!--<version>3.20.0-GA</version>-->
-        <!--</dependency>-->
-
-        <!--<dependency>-->
-        <!--<groupId>mysql</groupId>-->
-        <!--<artifactId>mysql-connector-java</artifactId>-->
-        <!--<version>5.1.36</version>-->
-        <!--</dependency>-->
-
+        <!--&lt;!&ndash;***************************************************************-->
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-dbcp2</artifactId>
@@ -183,24 +161,22 @@
         </dependency>
         <!-- https://mvnrepository.com/artifact/javax.validation/validation-api -->
         <!--<dependency>-->
-            <!--<groupId>javax.validation</groupId>-->
-            <!--<artifactId>validation-api</artifactId>-->
-            <!--<version>1.0.0.GA</version>-->
+        <!--<groupId>javax.validation</groupId>-->
+        <!--<artifactId>validation-api</artifactId>-->
+        <!--<version>1.0.0.GA</version>-->
         <!--</dependency>-->
-
 
 
         <!--<dependency>-->
-            <!--<groupId>javax.el</groupId>-->
-            <!--<artifactId>javax.el-api</artifactId>-->
-            <!--<version>2.2.4</version>-->
+        <!--<groupId>javax.el</groupId>-->
+        <!--<artifactId>javax.el-api</artifactId>-->
+        <!--<version>2.2.4</version>-->
         <!--</dependency>-->
         <!--<dependency>-->
-            <!--<groupId>org.glassfish.web</groupId>-->
-            <!--<artifactId>javax.el</artifactId>-->
-            <!--<version>2.2.4</version>-->
+        <!--<groupId>org.glassfish.web</groupId>-->
+        <!--<artifactId>javax.el</artifactId>-->
+        <!--<version>2.2.4</version>-->
         <!--</dependency>-->
-
 
 
     </dependencies>

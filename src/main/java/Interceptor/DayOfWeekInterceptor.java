@@ -24,7 +24,7 @@ public class DayOfWeekInterceptor extends HandlerInterceptorAdapter {
         Calendar calendar = Calendar.getInstance();
         int days = calendar.get(calendar.DAY_OF_WEEK);
 // specific day that close ....
-        if (days == 2) { // 1 means sunday ,,, 2 means monday
+        if (days == 5) { // 1 means sunday ,,, 2 means monday
 
             response.getWriter().write("This Application is Closing In That DAy ");
 

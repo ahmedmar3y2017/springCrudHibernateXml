@@ -7,16 +7,17 @@
 
 
     <http auto-config="true">
-        <intercept-url pattern="/**"  access="hasRole('ROLE_USER')"></intercept-url>
+        <intercept-url pattern="/**" access="hasRole('ROLE_USER')"></intercept-url>
     </http>
 
     <authentication-manager>
-        <authentication-provider user-service-ref="userDetailsService">
+        <authentication-provider>
+            <!--********************** memory ***************-->
             <!--<user-service>-->
             <!--<user name="ahmed" password="123" authorities="ROLE_USER"></user>-->
             <!--</user-service>-->
-
-            <!--<jdbc-user-service data-source-ref="dataSource"></jdbc-user-service>-->
+            <password-encoder hash="bcrypt"></password-encoder>
+            <jdbc-user-service data-source-ref="dataSource"></jdbc-user-service>
 
         </authentication-provider>
     </authentication-manager>
@@ -27,9 +28,9 @@
         <beans:property name="username" value="root"></beans:property>
         <beans:property name="password" value="root"></beans:property>
     </beans:bean>
-    <beans:bean id="userDetailsService" class="org.springframework.security.core.userdetails.jdbc.JdbcDaoImpl">
-    <beans:property name="dataSource" ref="dataSource"></beans:property>
+    <!--<beans:bean id="userDetailsService" class="org.springframework.security.core.userdetails.jdbc.JdbcDaoImpl">-->
+    <!--<beans:property name="dataSource" ref="dataSource"></beans:property>-->
 
-    </beans:bean>
+    <!--</beans:bean>-->
 
 </beans:beans>

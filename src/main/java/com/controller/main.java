@@ -1,5 +1,7 @@
 package com.controller;
 
+import org.springframework.security.authentication.encoding.Md5PasswordEncoder;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.LinkedHashMap;
@@ -14,19 +16,24 @@ public class main {
 
     public static void main(String[] args) {
 
-        // ------------------- Test Rest Api ----------------------------------
-        System.out.println("Testing listAllUsers API-----------");
+//        // ------------------- Test Rest Api ----------------------------------
+//        System.out.println("Testing listAllUsers API-----------");
+//
+//        RestTemplate restTemplate = new RestTemplate();
+//        List<LinkedHashMap<String, Object>> usersMap = restTemplate.getForObject(REST_SERVICE_URI + "/students", List.class);
+//
+//        if (usersMap != null) {
+//            for (LinkedHashMap<String, Object> map : usersMap) {
+//                System.out.println(map.get("username"));
+//            }
+//        } else {
+//            System.out.println("No user exist----------");
+//        }
 
-        RestTemplate restTemplate = new RestTemplate();
-        List<LinkedHashMap<String, Object>> usersMap = restTemplate.getForObject(REST_SERVICE_URI + "/students", List.class);
 
-        if (usersMap != null) {
-            for (LinkedHashMap<String, Object> map : usersMap) {
-                System.out.println(map.get("username"));
-            }
-        } else {
-            System.out.println("No user exist----------");
-        }
+        BCryptPasswordEncoder BCryptPasswordEncoder=new BCryptPasswordEncoder();
+        String pass=BCryptPasswordEncoder.encode("123" );
+        System.out.println(pass);
     }
 
 
